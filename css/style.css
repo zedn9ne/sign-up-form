@@ -37,6 +37,7 @@ body {
   font-size: 1.3rem;
 }
 .container .form-container {
+  max-width: 580px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -44,7 +45,7 @@ body {
 }
 .container .form-container .offer {
   height: 150px;
-  width: 100%;
+  min-width: 100%;
   background-color: hsl(248, 32%, 49%);
   display: flex;
   align-items: center;
@@ -54,20 +55,22 @@ body {
   margin-top: 4rem;
   border-radius: 0.825rem;
   box-shadow: 0px 9px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 .container .form-container .offer p {
+  transition: all 0.2s ease-in-out;
   width: 50%;
   text-align: center;
   line-height: 1.8rem;
 }
 .container .form-container .offer p span {
+  transition: all 0.2s ease-in-out;
   font-size: 1.2rem;
   color: #fff;
   font-weight: 600;
 }
 .container .form-container .form {
-  height: 650px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -92,9 +95,6 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
-.container .form-container .form .logIn .alert {
-  border: 1px solid hsl(0, 100%, 74%);
-}
 .container .form-container .form .logIn input::placeholder {
   padding-left: 1rem;
   text-transform: capitalize;
@@ -103,6 +103,12 @@ body {
 }
 .container .form-container .form .logIn input:focus-visible {
   border: 1px solid red;
+}
+.container .form-container .form .logIn .alert {
+  border: 1px solid hsl(0, 100%, 74%);
+}
+.container .form-container .form .logIn .alert::placeholder {
+  color: hsl(0, 100%, 74%);
 }
 .container .form-container .form .logIn button {
   display: flex;
@@ -116,7 +122,13 @@ body {
   font-size: 1.35rem;
   border-radius: 0.4rem;
   text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 9px 1px hsla(154, 54%, 49%, 0.757);
   cursor: pointer;
+}
+.container .form-container .form .logIn button:hover {
+  font-size: 1.5rem;
+  box-shadow: 0px 9px 1px hsl(154, 61%, 36%);
 }
 .container .form-container .form .logIn .terms-and-service {
   text-align: center;
@@ -127,6 +139,50 @@ body {
   color: hsl(0, 100%, 74%);
   font-weight: 600;
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .container header {
+    width: 50%;
+    height: 30%;
+  }
+  .container header h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+  .container header .text {
+    font-size: 2rem;
+  }
+  .container .form-container {
+    width: 50%;
+  }
+  .container .form-container .offer {
+    transition: all 0.2s ease-in-out;
+  }
+  .container .form-container .offer span {
+    font-size: 1.6rem !important;
+    transition: all 0.2s ease-in-out;
+  }
+  .container .form-container .offer p {
+    width: 100%;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .container .form-container .offer:hover {
+    box-shadow: 0px 12px 1px rgba(0, 0, 0, 0.5);
+  }
+  .container .form-container .offer:hover p {
+    width: 100%;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .container .form-container .offer:hover span {
+    font-size: 1.75rem !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

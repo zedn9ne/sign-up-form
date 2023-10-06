@@ -1,0 +1,45 @@
+@mixin responsive{
+    @media screen and (min-width:768px) {
+        .container{
+            flex-direction: row;
+            justify-content: space-around;
+            header{
+                width: 50%;
+                height: 30%;
+                h1{
+                    font-size: 5rem;
+                    line-height: 5.5rem;
+                }
+                .text{
+                    font-size: 2rem;
+                }
+            }
+            .form-container{       
+                width: 50%;
+                .offer{
+                    transition: all .2s ease-in-out;
+                    span{
+                        font-size: 1.6rem !important;
+                        transition: all .2s ease-in-out;
+                    }
+                    p{
+                        width: 100%;
+                        font-size: 1.3rem;
+                        transition: all .2s ease-in-out;
+                    }
+                    &:hover{
+                        box-shadow: 0px 12px 1px rgb(0,0,0,.5); 
+                            p {
+                                width: 100%;
+                                font-size: 1.3rem;
+                                transition: all .2s ease-in-out;
+                            }
+                            span{
+                                font-size: 1.75rem !important;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
