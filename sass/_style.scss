@@ -72,7 +72,7 @@ body{
         .form{
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: 700px;
             background-color: #fff;
             padding: 1rem 1.5rem;
             border-radius: .4rem;
@@ -82,6 +82,19 @@ body{
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+                padding-top: 1rem;
+                div{
+                    width: 100%;
+                    height: 100px;
+                    span{
+                        display: flex;
+                        width: 100%;
+                        margin-top: .5rem;
+                        justify-content: flex-end;
+                        color: $Red;
+                        transition: ease-out .3s;
+                    }
+                }
                 input{
                     height: 70px;
                     border: 1px solid rgb(0,0,0,.2);
@@ -91,6 +104,8 @@ body{
                     text-transform: capitalize;
                     font-size: 1.2rem;
                     font-weight: 600;
+                    outline: none;
+
                 }
                 
                 input::placeholder{
@@ -100,14 +115,21 @@ body{
                     font-weight: 600;
                 }
                 input:focus-visible{
-                    border: 1px solid red;
+                    border: 1px solid $Green;
                 }
                 // Danger Style 
                 .alert{
+                    background-image: url(/images/icon-error.svg);
+                    background-repeat: no-repeat;
+                    background-position: 95%;
                     border: 1px solid $Red;
                     &::placeholder{
                         color: $Red;
                     }
+                }
+                // success style
+                .success{
+                    border: 1px solid $Green;
                 }
                 // Button
                 button{
@@ -135,6 +157,7 @@ body{
                     text-align: center;
                     color: rgb(0,0,0,.4);
                     font-weight: 500;
+                    margin-top: 1rem;
                     a{
                         color: $Red;
                         font-weight: 600;
